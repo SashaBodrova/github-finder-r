@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 
 import Navbar from './components/layouts/Navbar'
 import Footer from './components/layouts/Footer'
@@ -10,7 +10,7 @@ import NotFound from './pages/NotFound'
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter basename='https://sashabodrova.github.io/github-finder-r'>
       <div className="flex flex-col justify-between h-screen">
 
         <Navbar />
@@ -26,7 +26,7 @@ function App() {
         <Footer />
 
       </div>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
