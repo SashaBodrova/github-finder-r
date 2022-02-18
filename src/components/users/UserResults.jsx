@@ -1,15 +1,10 @@
-import React, { useEffect, useContext } from 'react'
+import React, { useContext } from 'react'
 import GithubContext from '../../context/github/GithubContext'
-import Spinner from "../layouts/Spinner"
-import UserItem from "./UserItem"
+import Spinner from '../layouts/Spinner'
+import UserItem from './UserItem'
 
 const UserResults = props => {
-  const { users, fetchUsers, loading } = useContext(GithubContext)
-
-  useEffect(() => {
-    fetchUsers()
-  }, [])
-
+  const { users, loading } = useContext(GithubContext)
 
   if(!loading) {
     return (
@@ -22,12 +17,6 @@ const UserResults = props => {
   } else {
     return <Spinner />
   }
-
-
-}
-
-UserResults.propTypes = {
-
 }
 
 export default UserResults
