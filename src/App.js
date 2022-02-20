@@ -8,6 +8,7 @@ import Alert from './components/layouts/Alert'
 import Home from './pages/Home'
 import About from './pages/About'
 import NotFound from './pages/NotFound'
+import User from './pages/User'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Routes>
             <Route exact path='/' element={ <Home /> } />
             <Route path='/about' element={ <About /> } />
+            <Route path='/user/:login' element={ <User /> } />
             <Route path='*' element={ <NotFound/> } />
           </Routes>
         </main>
